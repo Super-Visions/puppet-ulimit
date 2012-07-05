@@ -26,6 +26,20 @@
 #
 #  class { 'ulimit::config': }
 #
+# example definition in hiera
+#
+# ulimit_rules:
+#   ulimit_memlock:
+#     ulimit_domain: *   
+#     ulimit_type: '-'  
+#     ulimit_item: memlock
+#     ulimit_value: 72000000
+#   ulimit_test:
+#     ulimit_domain: ':123'
+#     ulimit_type: hard
+#     ulimit_item: cpu
+#     ulimit_value: 5000  
+#
 # === Authors
 #
 # Stefan Goethals <stefan.goethals@super-visions.com>
